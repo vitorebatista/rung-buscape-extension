@@ -58,6 +58,6 @@ integrate with a third-party API called `Buscapé`.
 
 You'll get this screen and the result:
 
-![](http://imgur.com/a/monKa)
+![](http://i.imgur.com/Z3A9uBh.gif)
 
 If you get a valid value as output, an alert would be generated. Otherwise, nothing would happen.

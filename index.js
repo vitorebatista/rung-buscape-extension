@@ -1,4 +1,4 @@
-const { create, run } = require('rung-sdk');
+const { create } = require('rung-sdk');
 const { Money, String: Text } = require('rung-sdk/dist/types');
 const Bluebird = require('bluebird');
 const agent = require('superagent');
@@ -24,7 +24,8 @@ function main(context, done) {
             const products = body.product;
             const alerts = map(pipe(prop('product'), createAlert), products);
             done(alerts);
-        });
+        })
+        .catch(() => done([]));
 }
 
 const params = {
@@ -41,6 +42,5 @@ const params = {
 };
 
 const app = create(main, { params });
-app.run();
 
 module.exports = app;

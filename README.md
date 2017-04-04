@@ -1,6 +1,6 @@
 ## Rung ─ Buscapé extension
 
-This is a demo extension to Rung showing how to be alerted when a product is more cheaper.
+This is a demo extension to Rung showing how to be alerted when a product is cheaper according to Buscapé's site.
 
 ### Full source
 
@@ -53,11 +53,16 @@ const app = create(main, { params });
 module.exports = app;
 ```
 
-When you clone this repo and install the packages, you can do `node index.js` to start the _Query Wizard_ via _CLI_. We
-integrate with a third-party API called `Buscapé`.
+### Test and develop
+
+- Clone the project and `cd` to its directory
+- Install the dependencies: `npm install` or `yarn`
+- If you don't have `rung-cli`, install it globally by running `sudo npm install -g rung-cli`
+- Modify the source providing your token and source id
+- Run `rung run` to start the _Query Wizard_ via _CLI_
 
 You'll get this screen and the result:
 
 ![](http://i.imgur.com/Z3A9uBh.gif)
 
-If you get a valid value as output, an alert would be generated. Otherwise, nothing would happen.
+Your result will be an array containing all the alerts that would be generated.
